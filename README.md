@@ -1,2 +1,3 @@
-# regex
-Regex Trials 
+#Regex Notions with Examples - Have been noted while learning
+
+
