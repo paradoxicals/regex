@@ -56,3 +56,15 @@ echo preg_replace($patternNotation5_2,"-",$str5).'<br>';
 echo preg_replace($patternNotation5_3,"*",$str5).'<br>';
 echo preg_replace($patternNotation5_4,"&",$str5).'<br>';
 echo preg_replace($patternNotation5_4,"*",$str5).'<br><br>';
+
+
+
+$str6 = "quantity and qr codes are useful";
+$str6_1 = "src = 'url'";
+$patternNotation6 = "/\w(?=u)/"; // x(lookahead)
+$patternNotation6_1 = "/(?<=').{3}/";// (lookbehind)x
+$patternNotation6_2 = "/(?<=src = ')(.*)(?=')/"; //(lookbehind)x(lookahead)
+echo preg_replace($patternNotation6,"*",$str6).'<br>';
+echo preg_replace($patternNotation6_1,"*",$str6_1).'<br>';
+echo preg_replace($patternNotation6_2,"-",$str6_1).'<br>';
+
