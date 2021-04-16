@@ -66,5 +66,22 @@ $patternNotation6_1 = "/(?<=').{3}/";// (lookbehind)x
 $patternNotation6_2 = "/(?<=src = ')(.*)(?=')/"; //(lookbehind)x(lookahead)
 echo preg_replace($patternNotation6,"*",$str6).'<br>';
 echo preg_replace($patternNotation6_1,"*",$str6_1).'<br>';
-echo preg_replace($patternNotation6_2,"-",$str6_1).'<br>';
+echo preg_replace($patternNotation6_2,"-",$str6_1).'<br>'.'<br>';
+
+
+
+// telefon number
+$str7= "123 456 7890";
+$str7_1= "123-456-7890";
+$str7_2 = "+90 123-456-7890";
+$patternNotation7 = "/(\d{3})?[ -](\d{3})?[ -](\d{4})/"; 
+$patternNotation7_1 = "/(\d{3})?[ -](\d{3})?[ -](\d{4})/";
+$patternNotation7_2 = "/(\+\d{2})?[ ](\d{3})?[ -](\d{3})?[ -](\d{4})/"; //(lookbehind)x(lookahead)
+echo preg_replace($patternNotation7,"*",$str7).'<br>';
+echo preg_replace($patternNotation7_1,"*",$str7_1).'<br>';
+echo preg_replace($patternNotation7_2,"-",$str7_2).'<br>';
+
+
+
+
 
